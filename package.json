@@ -1,0 +1,24 @@
+{
+  "name": "cli-mongo-connection",
+  "version": "0.0.1",
+  "description": "Encapsulates the process to get the mongo login credentials from the command line",
+  "main": "getMongoConnection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongo",
+    "mongodb",
+    "cli"
+  ],
+  "author": "Fullchee Zhang",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "mongodb": "^2.2.31"
+  },
+  "devDependencies": {
+    "mocha": "5.0.0",
+    "rewire": "3.0.2"
+  }
+}
