@@ -1,5 +1,6 @@
 # cli-mongo-connection
-Get the Mongo information from the 
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+Get the Mongo information from the command line.
 
 ## Code Usage
 ```js
