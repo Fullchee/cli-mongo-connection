@@ -1,6 +1,8 @@
 # cli-mongo-connection
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
-Get the Mongo information from the command line.
+
+
+Get the Mongo information for command line programs.
 
 ## Code Usage
 ```js
@@ -15,5 +17,5 @@ async function main() {
 ## Program Usage
 ```bash
 # use the same command line arguments as mongodump and mongorestore to connect to mongo
-$ fileName -h <host> [--port <port> -u <username> -p <password>]
+$ programName -h <host> [--port <port> -u <username> -p <password>]
 ```
