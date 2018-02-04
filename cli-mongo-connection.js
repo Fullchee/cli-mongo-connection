@@ -6,7 +6,7 @@
 
 const program = require('commander')
 const MongoClient = require('mongodb').MongoClient
-const queryString = require('query-string')
+const querystring = require('querystring')
 
 /**
  *
@@ -14,13 +14,6 @@ const queryString = require('query-string')
  * @returns {Promise.<Object>} - connection to the provided mongo database
  */
 function getMongoConnection () {
-  return MongoClient.connect(getCLIInfo())
-}
-
-/**
- *
- */
-function getCLIInfo () {
   program
         .usage('[options`] <file ...>')
         .option('-h --host <host>', '<hostname><:port> [localhost:27017]', 'localhost:27017')
@@ -29,8 +22,7 @@ function getCLIInfo () {
         .option('-p --password <password>', '<password>')
         .option('-d --database <database>', '<database name> [pvelocity-com]', 'pvelocity-com')
         .parse(process.argv)
-
-  return createMongoURI(program)
+  return MongoClient.connect(createMongoURI(program))
 }
 
 /**
@@ -66,7 +58,7 @@ function createMongoURI (mongoInfo) {
     mongoURL += '/' + mongoInfo.databaseName
   }
 
-  const optionsString = queryString.stringify(mongoInfo.options)
+  const optionsString = querystring.stringify(mongoInfo.options)
 
   if (optionsString) {
     mongoURL += '?' + optionsString

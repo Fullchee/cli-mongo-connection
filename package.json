@@ -4,7 +4,7 @@
   "description": "Does all the CLI work of getting MongoDB options.",
   "main": "getMongoConnection.js",
   "scripts": {
-    "test": "standard && mocha",
+    "test": "standard && nyc mocha",
     "security-check": "nsp check"
   },
   "standard": {

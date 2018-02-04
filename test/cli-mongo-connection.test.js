@@ -29,6 +29,12 @@ describe('cli-mongo-connection', function () {
       }
     }
 
-    assert.equal(createMongoURI(info2), 'mongodb://db.example.net:28001?connectionTimeoutMS=100000&maxPoolSize=100&minPoolSize=0&replicaSet=test&socketTimeoutMS=10000&ssl=true&w=1')
+    assert.equal(createMongoURI(info2), 'mongodb://db.example.net:28001?replicaSet=test&ssl=true&connectionTimeoutMS=100000&socketTimeoutMS=10000&maxPoolSize=100&minPoolSize=0&w=1')
+
+    assert.equal(createMongoURI({}), 'mongodb://localhost:27017')
+  })
+
+  it('functional tests', function () {
+
   })
 })
