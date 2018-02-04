@@ -1,7 +1,7 @@
 {
   "name": "cli-mongo-connection",
   "version": "0.0.1",
-  "description": "Encapsulates the process to get the mongo login credentials from the command line",
+  "description": "Does all the CLI work of getting MongoDB options.",
   "main": "getMongoConnection.js",
   "scripts": {
     "test": "standard && mocha",
