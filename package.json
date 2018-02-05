@@ -2,7 +2,7 @@
   "name": "cli-mongo-connection",
   "version": "0.0.4",
   "description": "Does all the CLI work of getting MongoDB options.",
-  "main": "getMongoConnection.js",
+  "main": "cli-mongo-connection.js",
   "scripts": {
     "test": "standard && nyc mocha",
     "security-check": "nsp check"
