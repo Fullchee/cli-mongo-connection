@@ -2,7 +2,7 @@
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 
-[![NSP Status](https://nodesecurity.io/orgs/fullchee/projects/a23818ce-83db-4f78-a130-6f4ca4ffca27/badge)]
+![NSP Status](https://nodesecurity.io/orgs/fullchee/projects/a23818ce-83db-4f78-a130-6f4ca4ffca27/badge)
 
 
 Get the Mongo information for command line programs.

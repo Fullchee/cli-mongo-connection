@@ -4,13 +4,17 @@
   "description": "Does all the CLI work of getting MongoDB options.",
   "main": "cli-mongo-connection.js",
   "scripts": {
-    "test": "standard && nyc mocha",
+    "test": "standard --fix && nyc mocha",
     "security-check": "nsp check"
   },
   "standard": {
     "env": [
       "mocha"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fullchee/cli-mongo-connection.git"
   },
   "keywords": [
     "mongo",
@@ -20,7 +24,7 @@
   "author": "Fullchee Zhang",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.11.0",
+    "minimist": "1.2.0",
     "mongodb": "^2.2.31"
   },
   "devDependencies": {

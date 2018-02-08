@@ -1,28 +1,24 @@
-
 'use strict'
 /**
  * Encapsulate the mongo node driver connection
  */
-
-const program = require('commander')
 const MongoClient = require('mongodb').MongoClient
 const querystring = require('querystring')
+const argv = require('minimist')(process.argv.slice(2))
 
 /**
  *
  * @param {string} mongoURI - URI to the mongo database
  * @returns {Promise.<Object>} - connection to the provided mongo database
  */
-function getMongoConnection () {
-  program
-        .usage('[options`] <file ...>')
-        .option('-h --host <host>', '<hostname><:port> [localhost:27017]', 'localhost:27017')
-        .option('--port <port>', '<port> [27017]', '27017')
-        .option('-u --username <username>', '<username>')
-        .option('-p --password <password>', '<password>')
-        .option('-d --database <database>', '<database name> [pvelocity-com]', 'pvelocity-com')
-        .parse(process.argv)
-  return MongoClient.connect(createMongoURI(program))
+
+async function getMongoConnection () {
+  try {
+    const client = await MongoClient.connect(createMongoURI(argv))
+    return client
+  } catch (err) {
+    throw new Error('Could not connect to the Mongo Database: ' + argv)
+  }
 }
 
 /**
