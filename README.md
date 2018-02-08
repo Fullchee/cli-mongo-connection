@@ -9,6 +9,7 @@ Get the Mongo information for command line programs.
 
 ## Code Usage
 ```js
+// your-program.js
 const cliMongoConnection = require('cli-mongo-connection');
 
 async function main() {
@@ -19,6 +20,12 @@ async function main() {
 
 ## Program Usage
 ```bash
-# use the same command line arguments as mongodump and mongorestore to connect to mongo
-$ programName -h <host> [--port <port> -u <username> -p <password>]
+$ node your-program.js --host <host> --port <port> --username <username> --password <password>
 ```
+
+### Vision
+I built this to easily connect to a mongo database to run small scripts.
+
+You can only connect to one database.
+
+It just has the host, port, username and password.
