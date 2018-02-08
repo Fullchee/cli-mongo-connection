@@ -1,6 +1,6 @@
 {
   "name": "cli-mongo-connection",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Does all the CLI work of getting MongoDB options.",
   "main": "cli-mongo-connection.js",
   "scripts": {
